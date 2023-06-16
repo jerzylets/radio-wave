@@ -55,3 +55,4 @@ $RECYCLE.BIN/
 /.cache
 /dist
 /node_modules
+/.parcel-cache
