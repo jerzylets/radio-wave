@@ -14,10 +14,12 @@
   <link rel="preload" href="fonts/openSansRegular.woff2" as="font">
   <link rel="icon" href="img/favicon.svg" type="image/svg">
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../node_modules/dialog-polyfill/dist/dialog-polyfill.css" />
   <link rel="stylesheet" href="styles/index.scss">
+  <base target="_blank">
 </head>
 
-<body>
+<body class="body">
   <svg display="none">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="tweeter">
       <g clip-path="url(#clip0_24531_5311)">
@@ -204,10 +206,132 @@
         fill="#A1A6B4"></path>
     </symbol>
   </svg>
-  <h1>Title</h1>
-  <svg class="icon" width="20" height="20">
-    <use xlink:href="#play"></use>
-  </svg>
+  <header class="header">
+    <div class="container">
+      <div class="header__menu-main main-menu flex">
+        <a class="logo-link header__logo-link">
+          <img class="logo" src="img/logo1.svg" alt="Логотип W-wave">
+        </a>
+        <nav class="header__nav nav">
+          <ul class="nav__list list-reset flex">
+            <li class="nav__item">
+              <a href="#podcasts" class="nav__link" target="_self">
+                Подкасты
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#broadcasts" class="nav__link" target="_self">
+                Передачи
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#guests" class="nav__link" target="_self">
+                Гости
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#playlists" class="nav__link" target="_self">
+                Плейлисты
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link" target="_self">
+                О нас
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="main-menu__buttons">
+          <button class="btn-reset search-btn" aria-label="Поиск">
+            <svg class="icon serch-btn__icon">
+              <use xlink:href="#loupe"></use>
+            </svg>
+          </button>
+          <button class="btn btn-reset entry-btn">
+            Вход
+          </button>
+        </div>
+      </div>
+      <div class="header__menu-secondary secondary-menu flex">
+        <ul class="secondary-menu__list list-reset flex">
+          <li class="secondary-menu__item">
+            <a class="secondary-menu__link">
+              Новости
+            </a>
+          </li>
+          <li class="secondary-menu__item">
+            <a class="secondary-menu__link">
+              Блоги
+            </a>
+          </li>
+          <li class="secondary-menu__item">
+            <a class="secondary-menu__link">
+              Топы
+            </a>
+          </li>
+          <li class="secondary-menu__item">
+            <a class="secondary-menu__link">
+              Опросы
+            </a>
+          </li>
+          <li class="secondary-menu__item">
+            <a class="secondary-menu__link">
+              Рейтинги
+            </a>
+          </li>
+        </ul>
+        <div class="secondary-menu__buttons">
+          <button class="play-btn btn btn-reset secondary-menu__btn">
+            <svg class="icon play-btn__icon">
+              <use xlink:href="#play"></use>
+            </svg>
+            <span class="play-btn__text">
+              Ранее в эфире
+            </span>
+            <span class="play-btn__title">
+              «Музыка»
+            </span>
+          </button>
+          <button class="play-btn btn btn-reset secondary-menu__btn">
+            <svg class="icon play-btn__icon">
+              <use xlink:href="#play"></use>
+            </svg>
+            <span class="play-btn__text">
+              Сейчас в эфире
+            </span>
+            <span class="play-btn__title">
+              «Как так?»
+            </span>
+          </button>
+        </div>
+        <div class="secondary-menu__notice">
+          12 +
+        </div>
+      </div>
+      <dialog style="display: block;" class="header__window entry-window flex" aria-labeledby="entry-title">
+        <h2 class="entry-window__title" id="entry-title">
+          Вход
+        </h2>
+        <div class="entry-window__text">
+          Если у вас ещё нет аккаунта,
+          <a href="#" class="entry-window__link regis-link">зарегистрирутесь</a>
+        </div>
+        <form class="entry-window__form entry-form" action="https://jsonplaceholder.typicode.com/post">
+          <input class="entry-form__input" type="text" placeholder="Логин">
+          <input class="entry-form__input" type="text" placeholder="Пароль">
+          <button class="entry-form__btn btn btn-reset" type="submit">
+            Войти
+          </button>
+        </form>
+      </dialog>
+    </div>
+  </header>
+  <main class="main">
+
+  </main>
+  <footer class="footer">
+
+  </footer>
   <script src="js/index.js"></script>
 </body>
 
