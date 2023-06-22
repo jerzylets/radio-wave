@@ -308,7 +308,7 @@
           12 +
         </div>
       </div>
-      <dialog style="display: block;" class="header__window entry-window flex" aria-labeledby="entry-title">
+      <dialog class="header__window entry-window flex" aria-labeledby="entry-title">
         <h2 class="entry-window__title" id="entry-title">
           Вход
         </h2>
@@ -323,14 +323,439 @@
             Войти
           </button>
         </form>
+        <div class="entry-window__socials">
+          <div class="entry-window__text">
+            Войти с помощью:
+          </div>
+          <ul class="list-reset entry-window__list flex">
+            <li class="entry-window__item">
+              <a href="#" class="entry-window__link">
+                <svg class="icon">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="entry-window__item">
+              <a href="#" class="entry-window__link">
+                <svg class="icon">
+                  <use xlink:href="#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="entry-window__item">
+              <a href="#" class="entry-window__link">
+                <svg class="icon">
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="entry-window__btn-close btn-reset">
+          <svg class="icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
       </dialog>
     </div>
   </header>
   <main class="main">
+    <section class="section hero flex" id="hero">
+      <div class="container">
+        <h1 class="hero__title">
+          Радио
+          <span class="hero__title--italic">W-wave</span>
+        </h1>
+        <p class="hero__text">
+          Привет, на связи W-Wave! Раньше мы были изданием, а теперь пробуем себя в разоворном жанре. Говорим о музыке,
+          политике, истории, науке и культуре. Здесь, помимо прямого эфира — архив передач и многое другое:)
+        </p>
+        <a href="#" class="hero__link btn-reset btn">
+          Слушать эфир
+        </a>
+        <img class="hero__image">
+      </div>
+    </section>
+    <section class="section podcasts" id="podcasts">
+      <div class="container">
+        <h2 class="section__title">
+          Подкасты
+        </h2>
+        <div class="podcasts__grid grid">
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="img/european-city-320.jpg" media="(max-width: 575px)">
+              <img src="img/european-city.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="06-14">14 июня</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="15:43">15:43</time>
+              <h3 class="podcast__title">
+                Европа. XIX век
+              </h3>
+              <div class="podcast__author">
+                Дмитрий Гутенберг
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="img/violinist-320.jpg" media="(max-width: 575px)">
+              <img src="img/violinist.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="06-11">11 июня</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="5:32">5:32</time>
+              <h3 class="podcast__title">
+                О музыке
+              </h3>
+              <div class="podcast__author">
+                Дмитрий Гутенберг
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play-btn"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="img/crowd-320.jpg" media="(max-width: 575px)">
+              <img src="img/crowd.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="06-08">8 июня</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="8:54">8:54</time>
+              <h3 class="podcast__title">
+                Люди сегодня
+              </h3>
+              <div class="podcast__author">
+                Анна Васильева
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="img/african-woman-320.jpg" media="(max-width: 575px)">
+              <img src="img/african-woman.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="06-05">5 июня</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="9:04">9:04</time>
+              <h3 class="podcast__title">
+                Хэллоу, Африка
+              </h3>
+              <div class="podcast__author">
+                Пётр Дмитриевский
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="" media="(max-width: 575px)">
+              <img src="img/thinker.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="06-02">2 июня</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="7:03">7:03</time>
+              <h3 class="podcast__title">
+                Обо всём
+              </h3>
+              <div class="podcast__author">
+                Пётр Дмитриевский
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="" media="(max-width: 575px)">
+              <img src="img/wheel.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="05-28">28 мая</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="9:15">9:15</time>
+              <h3 class="podcast__title">
+                Физика цвета
+              </h3>
+              <div class="podcast__author">
+                Татьяна Флеганова
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="" media="(max-width: 575px)">
+              <img src="img/wawes.jpg" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="05-22">22 мая</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="16:04">16:04</time>
+              <h3 class="podcast__title">
+                Источник звука
+              </h3>
+              <div class="podcast__author">
+                Пётр Дмитриевский
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="podcasts__item podcast flex">
+            <picture class="podcast__pic">
+              <source srcset="" media="(max-width: 575px)">
+              <img src="img/classy-couple.png" alt="" class="podcast__img">
+            </picture>
+            <time class="podcast__date" datetime="05-18">18 мая</time>
+            <div class="podcast__content flex">
+              <time class="podcast__time" datetime="6:55">6:55</time>
+              <h3 class="podcast__title">
+                Правила этикета
+              </h3>
+              <div class="podcast__author">
+                Татьяна Флеганова
+              </div>
+              <div class="podcast__stats flex">
+                <div class="played"></div>
+                <div class="liked"></div>
+                <div class="shared"></div>
+              </div>
+              <button class="podcast__play-btn btn-reset">
+                <svg class="icon--big">
+                  <use xlink:href="#play"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+        <button class="btn-more btn-reset btn">
+          Ещё подкасты
+        </button>
+      </div>
+    </section>
+    <section class="section broadcasts" id="broadcasts">
+      <div class="container broadcast__grid grid">
+        <div class="broadcast__item author-filter flex">
+          <h2 class="section__title">
+            Передачи
+          </h2>
+          <form class="author-filter__form flex">
+            <label class="author-filter__label" for="author-select">Автор</label>
+            <select class="author-filter__select" name="author" id="author-select">
+              <option value="gutenberg">Дмитрий Гутенберг</option>
+              <option value="fleganova">Татяьна Флеганова</option>
+              <option value="vasilieva">Анна Васильева</option>
+              <option value="dmitrievsky">Пётр Дмитриевский</option>
+            </select>
+          </form>
+        </div>
+        <div class="broadcast__item archive grid">
+          <img class="archive__image" src="img/mic.png" alt="">
+          <a href="#" class="archive__link btn-rest btn">
+            Архив
+          </a>
+          <p class="archive__descr">
+            В архив попадают все передачи, которые вы пропустили! Enjoy:&#41;
+          </p>
+        </div>
+        <div class="broadcast__item programs grid">
+          <article class="programs__item flex">
+            <picture class="programs__pic">
+              <source srcset="img/biblioteque-320.jpg" media="(max-width: 575px)">
+              <img src="img/biblioteque.jpg" alt="Гравюра библиотеки" class="programs__image">
+            </picture>
+            <div class="programs__content flex">
+              <h3 class="programs__title">
+                О людях и книгах
+              </h3>
+              <div class="programs__text">
+                Анонсируется отдельно
+              </div>
+              <a href="#" class="programs__link">
+                Подробнее
+              </a>
+            </div>
+          </article>
+          <article class="programs__item flex">
+            <picture class="programs__pic">
+              <source srcset="img/graphomaniac-320.jpg" media="(max-width: 575px)">
+              <img src="img/graphomaniac.jpg" alt="Графоман" class="programs__image">
+            </picture>
+            <div class="programs__content flex">
+              <h3 class="programs__title">
+                Графомания td
+              </h3>
+              <div class="programs__text">
+                По понедельникам в 10:00
+              </div>
+              <a href="#" class="programs__link">
+                Подробнее
+              </a>
+            </div>
+          </article>
+          <article class="programs__item flex">
+            <picture class="programs__pic">
+              <source srcset="img/coliseum-320.jpg" media="(max-width: 575px)">
+              <img src="img/coliseum.jpg" alt="Колизей" class="programs__image">
+            </picture>
+            <div class="programs__content flex">
+              <h3 class="programs__title">
+                Не Рим, не Троя
+              </h3>
+              <div class="programs__text">
+                По вторникам в 12:00
+              </div>
+              <a href="#" class="programs__link">
+                Подробнее
+              </a>
+            </div>
+          </article>
+          <article class="programs__item flex">
+            <picture class="programs__pic">
+              <source srcset="img/gentleman-320.jpg" media="(max-width: 575px)">
+              <img src="img/gentleman.jpg" alt="Джентельмен" class="programs__image">
+            </picture>
+            <div class="programs__content flex">
+              <h3 class="programs__title">
+                Эрудит
+              </h3>
+              <div class="programs__text">
+                По пятницам в 17:00
+              </div>
+              <a href="#" class="programs__link">
+                Подробнее
+              </a>
+            </div>
+          </article>
+          <article class="programs__item flex">
+            <picture class="programs__pic">
+              <source srcset="img/rabbit-320.jpg" media="(max-width: 575px)">
+              <img src="img/rabbit.jpg" alt="Средневекой кролик" class="programs__image">
+            </picture>
+            <div class="programs__content flex">
+              <h3 class="programs__title">
+                Тонкости эпох
+              </h3>
+              <div class="programs__text">
+                По субботам в 10:00
+              </div>
+              <a href="#" class="programs__link">
+                Подробнее
+              </a>
+            </div>
+          </article>
+          <article class="programs__item flex">
+            <picture class="programs__pic">
+              <source srcset="img/hedgehog-320.jpg" media="(max-width: 575px)">
+              <img src="img/hedgehog.jpg" alt="Ёж" class="programs__image">
+            </picture>
+            <div class="programs__content flex">
+              <h3 class="programs__title">
+                Живые мысли
+              </h3>
+              <div class="programs__text">
+                По воскресеньям в 15:00
+              </div>
+              <a href="#" class="programs__link">
+                Подробнее
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section guests" id="guests">
+      <div class="container">
+        <h2 class="section__title section__title--white">
+          Гости
+        </h2>
+      </div>
+    </section>
+    <section class="section playlists" id="playlists">
+      <div class="container">
+        <h2 class="section__title">
+          Плейлисты
+        </h2>
+      </div>
+    </section>
+    <section class="section sell" id="sell">
 
+    </section>
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title section__title--white">
+          О нас
+        </h2>
+      </div>
+    </section>
   </main>
   <footer class="footer">
+    <div class="container">
 
+    </div>
   </footer>
   <script src="js/index.js"></script>
 </body>

@@ -1,0 +1,12 @@
+.hero {
+  position: relative;
+}
+
+.hero__image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: 372px;
+  background-image: url('../img/microphone.png');
+}

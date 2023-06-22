@@ -77,12 +77,12 @@ circle {
 
 .btn {
   padding: 25px 39px;
-  border-radius: var(--font-16);
+  border-radius: 15px;
   font-weight: 700;
   font-size: var(--font-16);
   line-height: var(--font-20);
   color: var(--white-color);
-  background-color: var(--orange-dark);
+  background-color: cyan;
 }
 
 .btn-status {
