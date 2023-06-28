@@ -15,12 +15,18 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible {
+  outline: none;
+}
+
 body {
   margin: 0px auto;
   max-width: 1920px;
   overflow-x: hidden;
   font-family: "Muller", "Open Sans", sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  color: $black-main;
   background-color: #fff;
 }
 
@@ -44,7 +50,7 @@ a svg path {
   stroke-width: inherit;
 }
 
-button svg path,
+svg path,
 rect,
 circle {
   fill: inherit;
@@ -76,29 +82,27 @@ circle {
 }
 
 .btn {
-  padding: 25px 39px;
-  border-radius: 15px;
-  font-weight: 700;
-  font-size: var(--font-16);
-  line-height: var(--font-20);
-  color: var(--white-color);
-  background-color: cyan;
+  padding: 25px 54px;
+  outline: 2px solid $hover;
+  border-radius: 40px;
+  font-weight: 500;
+  color: $black-main;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, outline 0.4s ease-in-out;
 }
 
-.btn-status {
-  transition: background-color 0.4s ease-in-out;
+.btn:focus-visible {
+  color: #fff;
+  background-color: $focus;
 }
 
-.btn-status:focus {
-  background-color: var(--orange-light);
+.btn:hover {
+  color: #fff;
+  background-color: $hover;
 }
 
-.btn-status:hover {
-  background-color: var(--orange-light);
-}
-
-.btn-status:active {
-  background-color: var(--red-brick);
+.btn:active {
+  background-color: $active;
+  outline: 2px solid $active;
 }
 
 .flex {
@@ -114,6 +118,15 @@ circle {
   flex-shrink: 0;
 }
 
-.contaner {
+.container {
+  margin: 0 auto;
   width: 1110px;
+}
+
+.logo-link {
+  height: $bigfont;
+}
+
+.logo {
+  flex-shrink: 0;
 }

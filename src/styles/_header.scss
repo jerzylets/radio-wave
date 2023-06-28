@@ -1,0 +1,71 @@
+@import "variables";
+@import "mixins";
+
+.header__menu-main {
+  padding: $offset 0;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav__list {
+  justify-content: space-between;
+  gap: 58px;
+
+  .nav__link {
+    font-size: $bigfont;
+  }
+}
+
+.main-menu__buttons {
+  gap: 24px;
+}
+
+.search-btn {
+  outline: none;
+}
+
+.search-btn:focus-visible {
+  .search-btn__icon {
+    stroke: $focus;
+  }
+}
+
+.search-btn:hover {
+  .search-btn__icon {
+    stroke: $focus;
+  }
+}
+
+.search-btn:active {
+  .search-btn__icon {
+    stroke: $active;
+  }
+}
+
+.search-btn__icon {
+  stroke-width: 2px;
+  stroke: $hover;
+  transition: stroke .4 ease-in-out;
+}
+
+.entry-btn {
+  padding: 12px 33px;
+  outline: 2px solid $black-main;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, outline 0.4s ease-in-out;
+}
+
+.btn:focus-visible {
+  color: $black-main;
+  background-color: $focus;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: $black-main;
+}
+
+.btn:active {
+  color: #fff;
+  background-color: $active;
+  outline: 2px solid $active;
+}

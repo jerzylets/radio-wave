@@ -186,9 +186,9 @@
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="loupe">
       <path
         d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-        stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M20.9999 21L16.6499 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round"></path>
+        stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M20.9999 21L16.6499 16.65" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      </path>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="insta">
       <g clip-path="url(#clip0_24531_5305)">
@@ -251,14 +251,14 @@
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#about" target="_self">
-                О нас
+                О&nbsp;нас
               </a>
             </li>
           </ul>
         </nav>
-        <div class="main-menu__buttons">
+        <div class="main-menu__buttons flex">
           <button class="btn-reset search-btn" aria-label="Поиск">
-            <svg class="icon serch-btn__icon">
+            <svg class="icon search-btn__icon">
               <use xlink:href="#loupe"></use>
             </svg>
           </button>
@@ -1536,7 +1536,7 @@
         </ul>
       </div>
       <nav class="footer__nav nav">
-        <ul class="nav__list list-reset grid">
+        <ul class="nav__list footer__nav-list list-reset grid">
           <li class="nav__item">
             <a class="nav__link" href="#podcasts" target="_self">
               Подкасты
