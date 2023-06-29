@@ -1,0 +1,30 @@
+@import 'variables';
+
+@mixin small-text {
+  color: $gray-dark;
+  font-size: $smallfont;
+}
+
+@mixin black-button {
+  padding: 12px 33px;
+  outline: 2px solid $black-main;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, outline 0.4s ease-in-out;
+
+  &:focus-visible {
+    color: $black-main;
+    background-color: $focus;
+    outline: 2px solid $black-main;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $black-main;
+    outline: 2px solid $black-main;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: $active;
+    outline: 2px solid $active;
+  }
+}

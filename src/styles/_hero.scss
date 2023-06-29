@@ -1,11 +1,61 @@
 .hero {
+  padding: 94px 0;
+}
+
+.hero__container {
   position: relative;
+}
+
+.hero__content {
+  flex-direction: column;
+  align-self: start;
+  width: 635px;
+}
+
+.hero__title {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+}
+
+.hero__title--italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero__text {
+  margin-bottom: 45px;
+  line-height: 150%;
+}
+
+.hero__link {
+  max-width: 35%;
+  color: #fff;
+  background-color: $hover;
+  outline: 2px solid $hover;
+  transition: background-color .4 ease-in-out, outline .4 ease-in-out;
+
+  &:focus-visible {
+    background-color: $focus;
+    outline: 2px solid $active;
+  }
+
+  &:hover {
+    background-color: $focus;
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $active;
+    outline: 2px solid $active;
+  }
 }
 
 .hero__image {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  right: 0;
+  top: -27%;
   width: 350px;
   height: 372px;
   background-image: url('../img/microphone.png');

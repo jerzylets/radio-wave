@@ -19,6 +19,10 @@ a:focus-visible {
   outline: none;
 }
 
+button:focus-visible {
+  outline: none;
+}
+
 body {
   margin: 0px auto;
   max-width: 1920px;
@@ -58,14 +62,40 @@ circle {
   stroke-width: inherit;
 }
 
+button {
+  svg {
+    transition: fill .4s ease-in-out;
+  }
+}
+
+button:focus-visible {
+  svg {
+    fill: $focus;
+  }
+}
+
+button:hover {
+  svg {
+    fill: $hover;
+  }
+}
+
+button:active {
+  svg {
+    fill: $active;
+  }
+}
+
 .icon {
   width: 24px;
   height: 24px;
+  fill: $gray-dark;
 }
 
 .icon--big {
   width: 48px;
   height: 48px;
+  fill: $gray-dark;
 }
 
 .list-reset {
@@ -87,7 +117,7 @@ circle {
   border-radius: 40px;
   font-weight: 500;
   color: $black-main;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, outline 0.4s ease-in-out;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out, outline .4s ease-in-out;
 }
 
 .btn:focus-visible {
@@ -101,6 +131,7 @@ circle {
 }
 
 .btn:active {
+  color: #fff;
   background-color: $active;
   outline: 2px solid $active;
 }
@@ -129,4 +160,21 @@ circle {
 
 .logo {
   flex-shrink: 0;
+}
+
+.menu-link {
+  transition: color .4s ease-in-out, background-color .4s ease-in-out;
+}
+
+.menu-link:focus-visible {
+  color: #fff;
+  background-color: $focus;
+}
+
+.menu-link:hover {
+  color: $hover;
+}
+
+.menu-link:active {
+  color: $active;
 }

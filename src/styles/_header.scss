@@ -1,14 +1,18 @@
 @import "variables";
 @import "mixins";
 
+.header {
+  padding: $offset 10px;
+}
+
 .header__menu-main {
-  padding: $offset 0;
+  justify-content: space-between;
   align-items: center;
   gap: 80px;
+  margin-bottom: 20px;
 }
 
 .nav__list {
-  justify-content: space-between;
   gap: 58px;
 
   .nav__link {
@@ -49,23 +53,86 @@
 }
 
 .entry-btn {
-  padding: 12px 33px;
-  outline: 2px solid $black-main;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, outline 0.4s ease-in-out;
+  @include black-button
 }
 
-.btn:focus-visible {
-  color: $black-main;
-  background-color: $focus;
+.secondary-menu {
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+
+  .secondary-menu__list {
+    gap: 52px;
+  }
 }
 
-.btn:hover {
-  color: #fff;
-  background-color: $black-main;
+.secondary-menu__btn {
+  position: relative;
+  padding: 14px 42px;
 }
 
-.btn:active {
-  color: #fff;
-  background-color: $active;
-  outline: 2px solid $active;
+.secondary-menu__btn:first-child::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 1px;
+  height: 40px;
+  background-color: $gray-light;
+}
+
+.secondary-menu__btn::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 1px;
+  height: 40px;
+  background-color: $gray-light;
+}
+
+
+.play-btn__icon {
+  position: absolute;
+  top: 28%;
+  left: 5%;
+}
+
+.play-btn__text {
+  margin-bottom: 5px;
+  padding-left: 5px;
+  @include small-text;
+
+  &:focus-visible {
+    outline: 1px solid #fff;
+  }
+}
+
+.secondary-menu__notice {
+  position: relative;
+  margin-right: 14px;
+  @include small-text;
+}
+
+.secondary-menu__notice::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: -13px;
+  width: 46px;
+  height: 65px;
+  background-color: $gray-light;
+  z-index: -1;
+}
+
+.secondary-menu__notice::after {
+  content: "";
+  position: absolute;
+  top: -57%;
+  right: -23%;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  z-index: -1;
 }
