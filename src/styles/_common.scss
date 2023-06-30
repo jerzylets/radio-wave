@@ -48,11 +48,11 @@ figure {
   margin: 0;
 }
 
-a svg path {
-  fill: inherit;
-  stroke: inherit;
-  stroke-width: inherit;
-}
+// a svg path {
+//   fill: inherit;
+//   stroke: inherit;
+//   stroke-width: inherit;
+// }
 
 svg path,
 rect,
@@ -116,6 +116,7 @@ button:active {
   outline: 2px solid $hover;
   border-radius: 40px;
   font-weight: 500;
+  font-size: $bigfont;
   color: $black-main;
   transition: background-color .4s ease-in-out, color .4s ease-in-out, outline .4s ease-in-out;
 }
@@ -177,4 +178,14 @@ button:active {
 
 .menu-link:active {
   color: $active;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.section__title {
+  margin-bottom: 12px;
+  font-weight: 400;
+  line-height: 100%;
 }

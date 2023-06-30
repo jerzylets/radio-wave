@@ -8,6 +8,7 @@
 @mixin black-button {
   padding: 12px 33px;
   outline: 2px solid $black-main;
+  font-size: 16px;
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, outline 0.4s ease-in-out;
 
   &:focus-visible {
@@ -26,5 +27,47 @@
     color: #fff;
     background-color: $active;
     outline: 2px solid $active;
+  }
+}
+
+@mixin blue-button {
+  color: #fff;
+  background-color: $hover;
+  outline: 2px solid $hover;
+  transition: background-color .4s ease-in-out, outline .4s ease-in-out;
+
+  &:focus-visible {
+    background-color: $focus;
+    outline: 2px solid $active;
+  }
+
+  &:hover {
+    background-color: $focus;
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $active;
+    outline: 2px solid $active;
+  }
+}
+
+@mixin stroke-icon {
+  &:focus-visible {
+    .podcast__icon {
+      stroke: $focus;
+    }
+  }
+
+  &:hover {
+    .podcast__icon {
+      stroke: $hover;
+    }
+  }
+
+  &:active {
+    .podcast__icon {
+      stroke: $active;
+    }
   }
 }

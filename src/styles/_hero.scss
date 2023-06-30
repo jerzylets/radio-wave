@@ -1,6 +1,5 @@
-.hero {
-  padding: 94px 0;
-}
+@import "variables";
+@import "mixins";
 
 .hero__container {
   position: relative;
@@ -30,26 +29,8 @@
 }
 
 .hero__link {
-  max-width: 35%;
-  color: #fff;
-  background-color: $hover;
-  outline: 2px solid $hover;
-  transition: background-color .4 ease-in-out, outline .4 ease-in-out;
-
-  &:focus-visible {
-    background-color: $focus;
-    outline: 2px solid $active;
-  }
-
-  &:hover {
-    background-color: $focus;
-    outline: 2px solid $focus;
-  }
-
-  &:active {
-    background-color: $active;
-    outline: 2px solid $active;
-  }
+  max-width: 39%;
+  @include blue-button;
 }
 
 .hero__image {

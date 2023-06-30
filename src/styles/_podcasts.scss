@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+
+.podcasts {
+  background-color: $gray-light;
+}
+
+.podcasts__title {
+  margin-bottom: $offset;
+}
+
+.podcasts__grid {
+  gap: $offset;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.podcasts__item {
+  position: relative;
+  background-color: #fff;
+}
+
+.podcast__img {
+  height: 100%;
+}
+
+.podcast__date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $gray-light;
+  font-size: 10px;
+}
+
+.podcast__content {
+  flex-direction: column;
+  align-items: start;
+  padding: 24px 30px 6px;
+}
+
+.podcast__time {
+  margin-bottom: 8px;
+  font-size: $smallfont;
+}
+
+.podcast__author {
+  margin-bottom: 24px;
+  color: $gray-dark;
+}
+
+.podcast__title {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.podcast__play-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  @include stroke-icon
+}
+
+.podcast__icon {
+  stroke-width: 2px;
+  stroke: $gray-dark;
+  transition: stroke .4s ease-in-out;
+}
+
+.podcast__stats {
+  position: relative;
+  gap: 48px;
+  padding: 9px 0 6px;
+  color: $gray-dark;
+}
+
+.podcast__stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 428px;
+  height: 1px;
+  background-color: $gray-light;
+
+}
