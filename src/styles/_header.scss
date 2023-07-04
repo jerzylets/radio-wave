@@ -69,6 +69,8 @@
 .secondary-menu__btn {
   position: relative;
   padding: 14px 42px;
+
+  @include stroke-icon;
 }
 
 .secondary-menu__btn:first-child::before {
@@ -96,6 +98,18 @@
   position: absolute;
   top: 28%;
   left: 5%;
+  stroke-width: 2px;
+  stroke: $gray-dark;
+
+  use {
+    path {
+      fill: $gray-dark;
+    }
+  }
+}
+
+.play-btn__icon use path {
+  fill: $gray-dark;
 }
 
 .play-btn__text {

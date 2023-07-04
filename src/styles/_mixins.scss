@@ -54,19 +54,19 @@
 
 @mixin stroke-icon {
   &:focus-visible {
-    .podcast__icon {
+    svg {
       stroke: $focus;
     }
   }
 
   &:hover {
-    .podcast__icon {
+    svg {
       stroke: $hover;
     }
   }
 
   &:active {
-    .podcast__icon {
+    svg {
       stroke: $active;
     }
   }

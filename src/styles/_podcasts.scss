@@ -5,6 +5,10 @@
   background-color: $gray-light;
 }
 
+.podcasts__container {
+  flex-direction: column;
+}
+
 .podcasts__title {
   margin-bottom: $offset;
 }
@@ -12,6 +16,7 @@
 .podcasts__grid {
   gap: $offset;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 60px;
 }
 
 .podcasts__item {
@@ -69,7 +74,7 @@
 
 .podcast__stats {
   position: relative;
-  gap: 48px;
+  gap: 27px;
   padding: 9px 0 6px;
   color: $gray-dark;
 }
@@ -82,5 +87,46 @@
   width: 428px;
   height: 1px;
   background-color: $gray-light;
+}
 
+.played,
+.liked,
+.shared {
+  position: relative;
+  margin-left: 19px;
+}
+
+.played::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -16px;
+  width: 10px;
+  height: 13px;
+  background: url('../icons/play1.svg') no-repeat;
+}
+
+.liked::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: -18px;
+  width: 13px;
+  height: 12px;
+  background: url('../icons/like.svg') no-repeat;
+}
+
+.shared::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -18px;
+  width: 12px;
+  height: 13px;
+  background: url('../icons/share.svg') no-repeat;
+}
+
+.btn-more {
+  align-self: center;
+  color: $hover;
 }
