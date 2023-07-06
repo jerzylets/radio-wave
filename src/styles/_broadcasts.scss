@@ -1,0 +1,61 @@
+@import "variables";
+@import "mixins";
+
+.broadcast__grid {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.author-filter {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  flex-direction: column;
+  max-height: 150px;
+
+  .author-filter__form {
+    flex-direction: column;
+  }
+}
+
+.author-filter__label {
+  margin-bottom: 8px;
+  color: $gray-dark;
+}
+
+.archive {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  flex-direction: column;
+  justify-content: end;
+
+  &__image {
+    margin-bottom: 24px;
+    width: 65px;
+    height: 89px;
+  }
+
+  &__link {
+    @include black-button;
+    margin-bottom: 12px;
+    padding: 12px 56px;
+    max-width: 160px;
+  }
+
+  &__descr {
+    max-width: 255px;
+    color: $gray-dark;
+    line-height: 150%;
+  }
+}
+
+.programs {
+  grid-column: 4 / span 9;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__item {
+    flex-direction: column;
+  }
+}
+
+.programs__content {
+  flex-direction: column;
+}
