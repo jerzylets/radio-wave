@@ -164,20 +164,7 @@ button:active {
 }
 
 .menu-link {
-  transition: color .4s ease-in-out, background-color .4s ease-in-out;
-}
-
-.menu-link:focus-visible {
-  color: #fff;
-  background-color: $focus;
-}
-
-.menu-link:hover {
-  color: $hover;
-}
-
-.menu-link:active {
-  color: $active;
+  @include menu-link;
 }
 
 .section {

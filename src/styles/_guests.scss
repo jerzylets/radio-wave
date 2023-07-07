@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins";
+
+.guests {
+  color: #fff;
+  background-color: $black-main;
+}
+
+.main-item__text {
+  color: $gray-dark;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+
+  &--expanded {
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+
+.accordion__control {
+  color: #fff;
+
+  .accordion__icon {
+    stroke: $gray-dark;
+  }
+}
+
+.guests__btn {
+  color: #fff;
+}
+
+.desc-item__link {
+  padding: 12px 20px;
+  color: $focus;
+  outline: 2px solid $focus;
+
+  @include blue-button2
+}

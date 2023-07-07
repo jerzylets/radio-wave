@@ -5,6 +5,23 @@
   font-size: $smallfont;
 }
 
+@mixin menu-link {
+  transition: color .4s ease-in-out, background-color .4s ease-in-out;
+
+  &:focus-visible {
+    color: #fff;
+    background-color: $focus;
+  }
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
 @mixin black-button {
   padding: 12px 33px;
   outline: 2px solid $black-main;
@@ -39,6 +56,25 @@
   &:focus-visible {
     background-color: $focus;
     outline: 2px solid $active;
+  }
+
+  &:hover {
+    background-color: $focus;
+    outline: 2px solid $focus;
+  }
+
+  &:active {
+    background-color: $active;
+    outline: 2px solid $active;
+  }
+}
+
+@mixin blue-button2 {
+  transition: background-color .4s ease-in-out, outline .4s ease-in-out;
+
+  &:focus-visible {
+    background-color: $hover;
+    outline: 2px solid $hover;
   }
 
   &:hover {
