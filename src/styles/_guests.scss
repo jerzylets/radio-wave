@@ -6,34 +6,130 @@
   background-color: $black-main;
 }
 
+.main-item {
+  flex-direction: column;
+}
+
 .main-item__text {
+  margin-bottom: 8px;
   color: $gray-dark;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
 
   &--expanded {
+    margin-bottom: 50px;
+    max-width: 800px;
     font-weight: 400;
     line-height: 160%;
   }
 }
 
+// .accordion {
+//   display: inline-block;
+// }
+
+.accordion__list {
+  flex-direction: column;
+}
+
+.guests__item {
+  flex-direction: column;
+}
+
+.accordion__wrapper {
+  border-top: 1px solid $focus;
+  border-bottom: 1px solid $focus;
+}
+
 .accordion__control {
+  position: relative;
+  padding: 34px 0;
+  width: 100%;
   color: #fff;
 
   .accordion__icon {
+    position: absolute;
+    top: 20px;
+    right: 0;
     stroke: $gray-dark;
   }
 }
 
-.guests__btn {
-  color: #fff;
+.accordion__content {
+  padding: 30px 34px 30px 0;
+  columns: 4 160px;
 }
 
-.desc-item__link {
-  padding: 12px 20px;
-  color: $focus;
-  outline: 2px solid $focus;
+.guests__btn {
+  display: block;
+  margin-bottom: 20px;
+  color: #fff;
 
-  @include blue-button2
+  &:focus-visible {
+    background-color: $hover;
+  }
+
+  &:hover {
+    color: $focus;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &--active {
+    color: $focus;
+  }
+}
+
+.guests__accordion-block {
+  position: relative;
+}
+
+.desc-item {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  flex-direction: column;
+  width: 350px;
+  transform: translateX(200%);
+  transition: transform .4s ease-in-out;
+
+  &--active {
+    transform: none;
+  }
+
+  &__pic {
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    gap: 32px;
+    margin-bottom: 12px;
+  }
+
+  &__icon {
+    stroke: $gray-dark;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: $offset;
+    color: $gray-dark;
+    line-height: 180%;
+  }
+
+  &__link {
+    padding: 12px 20px;
+    width: 160px;
+    color: $focus;
+    font-size: 16px;
+    outline: 2px solid $focus;
+
+    @include blue-button2
+  }
 }
