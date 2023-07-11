@@ -37,16 +37,34 @@
   flex-direction: column;
 }
 
-.accordion__wrapper {
-  border-top: 1px solid $focus;
-  border-bottom: 1px solid $focus;
-}
+// .accordion__wrapper {
+//   border-top: 1px solid $focus;
+//   border-bottom: 1px solid $focus;
+// }
 
 .accordion__control {
   position: relative;
   padding: 34px 0;
   width: 100%;
   color: #fff;
+  border-top: 1px solid $gray-dark;
+  border-bottom: 1px solid $gray-dark;
+
+  &:focus-visible {
+    background-color: $black-second;
+  }
+
+  &:hover {
+    color: $focus;
+
+    .accordion__icon {
+      stroke: $focus;
+    }
+  }
+
+  &:active {
+    color: $focus;
+  }
 
   .accordion__icon {
     position: absolute;

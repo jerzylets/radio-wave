@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixins";
+
+.sell {
+  background-color: $black-second;
+}
+
+.sell__container {
+  position: relative;
+  gap: $offset;
+}
+
+.sell__pic-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background: url('../icons/new.svg');
+}
+
+.sell__content {
+  flex-direction: column;
+  width: 445px;
+}
+
+.section__title--golden {
+  margin-bottom: 19px;
+  color: $yellow;
+}
+
+.sell__decor {
+  margin-bottom: 19px;
+  width: 100%;
+  stroke: $gray-dark;
+}
+
+.sell__text {
+  margin-bottom: 12px;
+  color: #fff;
+  line-height: 180%;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.sell__price {
+  margin-bottom: $offset;
+  font-weight: 500;
+  font-size: $offset;
+  color: #fff;
+}
+
+.market-link {
+  gap: 8px;
+  padding: 25px 14px;
+  width: 300px;
+  outline: 2px solid $yellow;
+  transition: outline .4s ease-in-out, background-color .4s ease-in-out;
+
+  &__icon {
+    stroke: $yellow;
+  }
+
+  &__text {
+    color: $yellow;
+    transition: color .4s ease-in-out;
+  }
+
+  &:focus-visible {
+    background-color: $brown;
+    outline: 2px solid $yellow;
+
+    .market-link__text {
+      color: $black-main;
+    }
+  }
+
+  &:hover {
+    background-color: $yellow;
+    outline: 2px solid $yellow;
+
+    .market-link__text {
+      color: $black-main;
+    }
+  }
+
+  &:active {
+    background-color: $brown;
+    outline: 2px solid $brown;
+
+    .market-link__text {
+      color: $black-main;
+    }
+  }
+}
