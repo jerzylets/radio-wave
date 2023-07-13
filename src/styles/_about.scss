@@ -2,5 +2,95 @@
 @import "mixins";
 
 .about {
+  color: #fff;
   background-color: $black-main;
+
+  &__container {
+    flex-direction: column;
+    gap: $offset;
+  }
+
+  &__desc {
+    position: relative;
+    max-width: 623px;
+  }
+
+  &__people {
+    gap: $offset;
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    color: $gray-dark;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  &__text {
+    color: $gray-dark;
+    line-height: 160%;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 162px;
+    height: 225px;
+    background: url('../icons/Spiral.svg');
+  }
+
+  &__decor--1 {
+    right: -485px;
+    width: 255px;
+    background: url('../icons/Dawn.svg');
+  }
+}
+
+.host {
+  flex-direction: column;
+  width: 255px;
+
+  &__title {
+    margin-bottom: 8px;
+    padding-top: $offset;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__desc {
+    color: $gray-dark;
+    line-height: 150%;
+  }
+}
+
+.feedback {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  max-width: 920px;
+
+  &__input {
+    padding: 25px 32px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &__textarea {
+    grid-column: span 2;
+    padding: 30px 32px;
+    border-radius: 30px;
+  }
+
+  &__label {
+    grid-row: 4;
+  }
+
+  &__btn {
+    @include blue-button;
+    width: 212px;
+    height: 70px;
+  }
 }

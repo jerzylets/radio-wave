@@ -120,3 +120,12 @@
     }
   }
 }
+
+.programs__link::after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: -30px;
+  width: 139%;
+  height: 300%;
+}

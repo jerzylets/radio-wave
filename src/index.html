@@ -1745,37 +1745,45 @@
     </section>
     <section class="section playlists" id="playlists">
       <div class="container playlist__content flex">
-        <div class="playlist__controls">
+        <div class="playlist__controls flex">
           <h2 class="section__title">
             Плейлисты
           </h2>
-          <form class="playlists__form flex">
-            <legend>Жанр</legend>
-            <input class="playlists__input" type="radio" id="postpunk" name="genre" value="postpunk">
-            <label for="postpunk">Постпанк</label>
-            <input class="playlists__input" type="radio" id="hardcore" name="genre" value="hardcore">
-            <label for="hardcore">Хардкор</label>
-            <input class="playlists__input" type="radio" id="punk-rock" name="genre" value="punk-rock">
-            <label for="punk-rock">Панк-рок</label>
-            <input class="playlists__input" type="radio" id="rock" name="genre" value="rock">
-            <label for="postpunk">Рок</label>
-            <input class="playlists__input" type="radio" id="progressive-rock" name="genre" value="progressive-rock">
-            <label for="hardcore">Прогрессивный рок</label>
-            <input class="playlists__input" type="radio" id="electronic-music" name="genre" value="electronic-music">
-            <label for="punk-rock">Электронная музыка</label>
-            <input class="playlists__input" type="radio" id="classic" name="genre" value="classic">
-            <label for="hardcore">Классическая музыка</label>
-            <input class="playlists__input" type="radio" id="ambient" name="genre" value="ambient">
-            <label for="punk-rock">Звуки природы и шум города</label>
+          <form class="playlists__form genres flex">
+            <legend class="genres__legend">Жанр</legend>
+            <label class="genres__label" for="postpunk">Постпанк
+              <input class="playlists__input" type="radio" id="postpunk" name="genre" value="postpunk">
+            </label>
+            <label class="genres__label" for="hardcore">Хардкор
+              <input class="playlists__input" type="radio" id="hardcore" name="genre" value="hardcore">
+            </label>
+            <label class="genres__label" for="punk-rock">Панк-рок
+              <input class="playlists__input" type="radio" id="punk-rock" name="genre" value="punk-rock">
+            </label>
+            <label class="genres__label" for="rock">Рок
+              <input class="playlists__input" type="radio" id="rock" name="genre" value="rock">
+            </label>
+            <label class="genres__label" for="progressive-rock">Прогрессивный рок
+              <input class="playlists__input" type="radio" id="progressive-rock" name="genre" value="progressive-rock">
+            </label>
+            <label class="genres__label" for="electronic-music">Электронная музыка
+              <input class="playlists__input" type="radio" id="electronic-music" name="genre" value="electronic-music">
+            </label>
+            <label class="genres__label" for="classic">Классическая музыка
+              <input class="playlists__input" type="radio" id="classic" name="genre" value="classic">
+            </label>
+            <label class="genres__label" for="ambient">Звуки природы и шум города
+              <input class="playlists__input" type="radio" id="ambient" name="genre" value="ambient">
+            </label>
           </form>
           <div class="playlists__disclaimer disclaimer">
             <div class="disclaimer__item">
               Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних
             </div>
-            <div class="disclaimer__item">
+            <div class="disclaimer__item disclaimer__item--italic">
               © 2021 l W-Wave
             </div>
-            <div class="disclaimer__item">
+            <div class="disclaimer__item disclaimer__age-limit">
               18+
             </div>
           </div>
@@ -1787,11 +1795,13 @@
               <img class="band__img" src="img/ploho.png" alt="Плохо">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Ploho
-            </h3>
-            <div class="band__text">
-              3 последних альбома
+            <div class="band__content">
+              <h3 class="band__title">
+                Ploho
+              </h3>
+              <div class="band__text">
+                3&nbsp;последних&nbsp;альбома
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1800,11 +1810,13 @@
               <img class="band__img" src="img/molchat-doma.jpg" alt="Молчат дома">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Molchat Doma
-            </h3>
-            <div class="band__text">
-              Все песни
+            <div class="band__content">
+              <h3 class="band__title">
+                Molchat Doma
+              </h3>
+              <div class="band__text">
+                Все песни
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1813,11 +1825,13 @@
               <img class="band__img" src="img/motorama.jpg" alt="Моторама">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Motorama
-            </h3>
-            <div class="band__text">
-              Все синглы
+            <div class="band__content">
+              <h3 class="band__title">
+                Motorama
+              </h3>
+              <div class="band__text">
+                Все синглы
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1826,11 +1840,13 @@
               <img class="band__img" src="img/human-tetris.jpg" alt="Human Tetris">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Human Tetris
-            </h3>
-            <div class="band__text">
-              3 последних альбома
+            <div class="band__content">
+              <h3 class="band__title">
+                Human Tetris
+              </h3>
+              <div class="band__text">
+                3&nbsp;последних&nbsp;альбома
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1839,11 +1855,13 @@
               <img class="band__img" src="img/buerak.jpg" alt="Буерак">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Буерак
-            </h3>
-            <div class="band__text">
-              Все EP
+            <div class="band__content">
+              <h3 class="band__title">
+                Буерак
+              </h3>
+              <div class="band__text">
+                Все EP
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1852,11 +1870,13 @@
               <img class="band__img" src="img/junes-days.jpg" alt="Июльские Дни">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Июльские Дни
-            </h3>
-            <div class="band__text">
-              Альбом «Колокол»
+            <div class="band__content">
+              <h3 class="band__title">
+                Июльские Дни
+              </h3>
+              <div class="band__text">
+                Альбом «Колокол»
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1865,11 +1885,13 @@
               <img class="band__img" src="img/joy-division.jpg" alt="Joy Division">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Joy Division
-            </h3>
-            <div class="band__text">
-              Лучшее за всё время
+            <div class="band__content">
+              <h3 class="band__title">
+                Joy Division
+              </h3>
+              <div class="band__text">
+                Лучшее за всё время
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1878,11 +1900,13 @@
               <img class="band__img" src="img/the-cure.png" alt="The Cure">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              The Cure
-            </h3>
-            <div class="band__text">
-              Лучшее за всё время
+            <div class="band__content">
+              <h3 class="band__title">
+                The Cure
+              </h3>
+              <div class="band__text">
+                Лучшее за всё время
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1891,11 +1915,13 @@
               <img class="band__img" src="img/the-smiths.jpg" alt="The Smiths">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              The Smiths
-            </h3>
-            <div class="band__text">
-              Период 1984-1989
+            <div class="band__content">
+              <h3 class="band__title">
+                The Smiths
+              </h3>
+              <div class="band__text">
+                Период 1984-1989
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1904,11 +1930,13 @@
               <img class="band__img" src="img/new-order.jpg" alt="New Order">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              New Order
-            </h3>
-            <div class="band__text">
-              Хиты
+            <div class="band__content">
+              <h3 class="band__title">
+                New Order
+              </h3>
+              <div class="band__text">
+                Хиты
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1917,11 +1945,13 @@
               <img class="band__img" src="img/bauhaus.jpg" alt="Bauhaus">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Bauhaus
-            </h3>
-            <div class="band__text">
-              Все синглы
+            <div class="band__content">
+              <h3 class="band__title">
+                Bauhaus
+              </h3>
+              <div class="band__text">
+                Все синглы
+              </div>
             </div>
           </div>
           <div class="playlists__item band flex">
@@ -1930,11 +1960,13 @@
               <img class="band__img" src="img/gang-of-four.jpg" alt="Gang Of Four">
             </picture>
             <div class="band__flag"></div>
-            <h3 class="band__title">
-              Gang Of Four
-            </h3>
-            <div class="band__text">
-              3 последних альбома
+            <div class="band__content">
+              <h3 class="band__title">
+                Gang Of Four
+              </h3>
+              <div class="band__text">
+                3&nbsp;последних&nbsp;альбома
+              </div>
             </div>
           </div>
         </div>
@@ -1980,7 +2012,7 @@
       </div>
     </section>
     <section class="section about" id="about">
-      <div class="container flex">
+      <div class="container about__container flex">
         <div class="about__desc">
           <h2 class="section__title section__title--white">
             О нас
@@ -1993,14 +2025,12 @@
             поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать
             либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся!:&#41;
           </p>
-          <svg class="about__decor icon">
-            <use xlink:href="#Spiral"></use>
-          </svg>
-          <svg class="about__decor icon">
-            <use xlink:href="#Dawn"></use>
-          </svg>
+          <div class="about__decor">
+          </div>
+          <div class="about__decor about__decor--1">
+          </div>
         </div>
-        <div class="about__people">
+        <div class="about__people flex">
           <article class="about__card host flex">
             <picture class="host__pic">
               <source srcset="img/gutenberg-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
@@ -2090,7 +2120,7 @@
           <textarea class="feedback__textarea feedback__input" name="feedback" id="feedback" placeholder="Что скажете?"
             required></textarea>
           <input class="feedback__name feedback__input" type="text" name="name" id="name" placeholder="Имя" required>
-          <input class="feedback__name feedback__input" type="email" name="email" id="email" placeholder="Email"
+          <input class="feedback__mail feedback__input" type="email" name="email" id="email" placeholder="Email"
             required>
           <button class="feedback__btn btn btn-reset" type="submit">
             Отправить
