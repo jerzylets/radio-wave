@@ -86,6 +86,49 @@
 
   &__label {
     grid-row: 4;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    appearance: none;
+  }
+
+  &__desc {
+    position: relative;
+    padding-left: 19px;
+  }
+
+  &__desc::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    transform: translateY(-50%);
+    transition: border .4s ease-in-out;
+  }
+
+  &__desc::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-50%);
+    background: url('../img/checked.svg');
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+  }
+
+  &__checkbox:checked+.feedback__desc::after {
+    opacity: 1;
   }
 
   &__btn {
