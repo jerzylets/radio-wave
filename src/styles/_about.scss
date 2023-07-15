@@ -66,16 +66,32 @@
 
 .feedback {
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   max-width: 920px;
 
   &__input {
     padding: 25px 32px;
     background-color: transparent;
-    border: 1px solid #fff;
+    outline: 1px solid #fff;
     border-radius: 40px;
     color: #fff;
     font-size: 20px;
+    transition: outline .4s ease-in-out, background-color .4s ease-in-out;
+  }
+
+  &__input:focus-visible {
+    outline: 1px solid $focus;
+    background-color: $black-second;
+  }
+
+  &__input:hover {
+    outline: 1px solid #fff;
+    background-color: $black-second;
+  }
+
+  &__input:active {
+    outline: 1px solid #fff;
+    background-color: transparent;
   }
 
   &__textarea {
@@ -84,8 +100,13 @@
     border-radius: 30px;
   }
 
+  &__wrapper {
+    flex-direction: column;
+    gap: $offset;
+  }
+
   &__label {
-    grid-row: 4;
+    // grid-row: 4;
     user-select: none;
     cursor: pointer;
   }

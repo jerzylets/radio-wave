@@ -131,8 +131,70 @@
 .band {
   position: relative;
 
+  &__button {
+    font-size: 0;
+  }
+
+  &__button:focus-visible {
+    .band__img {
+      filter: brightness(30%);
+    }
+
+    .band__content {
+      background-color: $focus;
+
+      .band__title {
+        color: #fff;
+      }
+
+      .band__text {
+        color: #fff;
+      }
+    }
+  }
+
+  &__button:hover {
+    .band__img {
+      filter: brightness(30%);
+    }
+
+    .band__content {
+      background-color: $hover;
+
+      .band__title {
+        color: #fff;
+      }
+
+      .band__text {
+        color: #fff;
+      }
+    }
+
+    &__button:active {
+      .band__img {
+        filter: brightness(30%);
+      }
+
+      .band__content {
+        background-color: $active;
+
+        .band__title {
+          color: #fff;
+        }
+
+        .band__text {
+          color: #fff;
+        }
+      }
+    }
+  }
+
   &__pic {
     font-size: 0;
+  }
+
+  &__img {
+    transition: filter .4s ease-in-out;
   }
 
   &__flag {
@@ -151,16 +213,19 @@
   &__content {
     padding: 16px 21px 16px 16px;
     outline: 1px solid $gray-light;
+    transition: background-color .4s ease-in-out;
   }
 
   &__title {
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 16px;
+    transition: color .4s ease-in-out;
   }
 
   &__text {
     font-size: 12px;
     color: $gray-dark;
+    transition: color .4s ease-in-out;
   }
 }

@@ -2,7 +2,9 @@
 @import "mixins";
 
 .header {
-  padding: $offset 10px;
+  padding: $offset 10px 0;
+  background-color: #fff;
+  z-index: -2;
 }
 
 .header__menu-main {
@@ -101,11 +103,13 @@
   stroke-width: 2px;
   stroke: $gray-dark;
 
-  use {
-    path {
-      fill: $gray-dark;
-    }
-  }
+  // path {
+  //   fill: $gray-dark;
+  // }
+
+  // circle {
+  //   fill: $gray-dark;
+  // }
 }
 
 .play-btn__icon use path {
@@ -126,6 +130,7 @@
   position: relative;
   margin-right: 14px;
   @include small-text;
+  z-index: 1;
 }
 
 .secondary-menu__notice::before {
