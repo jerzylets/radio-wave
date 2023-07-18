@@ -32,7 +32,8 @@
 .sell__decor {
   margin-bottom: 19px;
   width: 100%;
-  stroke: $gray-dark;
+  background: url('../icons/waves.svg');
+  background-repeat: no-repeat;
 }
 
 .sell__text {

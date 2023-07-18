@@ -102,18 +102,14 @@
   left: 5%;
   stroke-width: 2px;
   stroke: $gray-dark;
+}
 
-  // path {
-  //   fill: $gray-dark;
-  // }
-
-  // circle {
-  //   fill: $gray-dark;
-  // }
+.play-btn__icon use {
+  fill: $gray-dark;
 }
 
 .play-btn__icon use path {
-  fill: $gray-dark;
+  fill: #fff;
 }
 
 .play-btn__text {
