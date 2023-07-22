@@ -63,13 +63,19 @@
   top: 30px;
   right: 30px;
 
-  @include stroke-icon
+  @include play-icon
 }
 
 .podcast__icon {
   stroke-width: 2px;
   stroke: $gray-dark;
-  transition: stroke .4s ease-in-out;
+  transition: fill .4s ease-in-out, stroke .4s ease-in-out;
+
+  path {
+    fill: $gray-dark;
+    stroke: none;
+    transition: fill .4s ease-in-out;
+  }
 }
 
 .podcast__stats {

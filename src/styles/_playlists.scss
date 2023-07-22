@@ -228,4 +228,42 @@
     color: $gray-dark;
     transition: color .4s ease-in-out;
   }
+
+  &__icon {
+    position: absolute;
+    top: 23%;
+    right: 32%;
+    fill: $hover;
+    opacity: 0;
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.band__button {
+  &:focus-visible {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 1;
+      transform: scale(1.17);
+    }
+
+    .band__content {
+      background-color: $active;
+    }
+  }
 }

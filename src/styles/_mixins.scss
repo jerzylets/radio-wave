@@ -88,22 +88,55 @@
   }
 }
 
-@mixin stroke-icon {
+@mixin fill-only-icon {
+  &:focus-visible {
+    svg {
+      fill: $focus;
+    }
+  }
+
+  &:hover {
+    svg {
+      fill: $hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $active;
+    }
+  }
+}
+
+@mixin play-icon {
   &:focus-visible {
     svg {
       stroke: $focus;
+
+      path {
+        fill: $focus
+      }
     }
   }
 
   &:hover {
     svg {
       stroke: $hover;
+
+      path {
+        fill: $hover;
+      }
     }
   }
 
   &:active {
     svg {
       stroke: $active;
+      fill: $active;
+
+      path {
+        fill: #fff;
+      }
     }
   }
 }

@@ -61,7 +61,13 @@
   transition: outline .4s ease-in-out, background-color .4s ease-in-out;
 
   &__icon {
-    stroke: $yellow;
+    fill: $yellow;
+    transition: fill .4s ease-in-out;
+
+    .market-icon__component1 {
+      fill: $black-main;
+      transition: fill .4s ease-in-out;
+    }
   }
 
   &__text {
@@ -73,6 +79,14 @@
     background-color: $brown;
     outline: 2px solid $yellow;
 
+    svg {
+      fill: $yellow;
+
+      .market-icon__component1 {
+        fill: $black-main;
+      }
+    }
+
     .market-link__text {
       color: $black-main;
     }
@@ -82,6 +96,14 @@
     background-color: $yellow;
     outline: 2px solid $yellow;
 
+    svg {
+      fill: $black-main;
+
+      .market-icon__component1 {
+        fill: $yellow;
+      }
+    }
+
     .market-link__text {
       color: $black-main;
     }
@@ -90,6 +112,14 @@
   &:active {
     background-color: $brown;
     outline: 2px solid $brown;
+
+    svg {
+      fill: $black-main;
+
+      .market-icon__component1 {
+        fill: $brown;
+      }
+    }
 
     .market-link__text {
       color: $black-main;

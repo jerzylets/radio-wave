@@ -48,11 +48,11 @@ figure {
   margin: 0;
 }
 
-svg {
-  fill: inherit;
-  stroke: inherit;
-  stroke-width: inherit;
-}
+// svg {
+//   fill: inherit;
+//   stroke: inherit;
+//   stroke-width: inherit;
+// }
 
 svg path,
 rect,
@@ -61,28 +61,6 @@ circle {
   stroke: inherit;
   stroke-width: inherit;
 }
-
-svg {
-  transition: fill .4s ease-in-out, stroke .4s ease-in-out;
-}
-
-// button:focus-visible {
-//   svg {
-//     fill: $focus;
-//   }
-// }
-
-// button:hover {
-//   svg {
-//     fill: $hover;
-//   }
-// }
-
-// button:active {
-//   svg {
-//     fill: $active;
-//   }
-// }
 
 .icon {
   width: 24px;

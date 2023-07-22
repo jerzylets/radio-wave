@@ -72,7 +72,7 @@
   position: relative;
   padding: 14px 42px;
 
-  @include stroke-icon;
+  @include fill-only-icon
 }
 
 .secondary-menu__btn:first-child::before {
@@ -100,16 +100,20 @@
   position: absolute;
   top: 28%;
   left: 5%;
-  stroke-width: 2px;
-  stroke: $gray-dark;
-}
-
-.play-btn__icon use {
+  width: 24px;
+  height: 24px;
   fill: $gray-dark;
+  transition: fill .4s ease-in-out;
 }
 
-.play-btn__icon use path {
-  fill: #fff;
+.play-btn__icon--paused {
+  position: absolute;
+  top: 28%;
+  left: 5%;
+  width: 24px;
+  height: 24px;
+  fill: $gray-dark;
+  background: url('../icons/pause.svg');
 }
 
 .play-btn__text {

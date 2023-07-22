@@ -27,8 +27,20 @@
   gap: 21px;
 }
 
+.footer-socials__link {
+  @include fill-only-icon;
+}
+
 .footer-socials__icon {
-  stroke: $gray-dark;
+  fill: $gray;
+}
+
+.vk-icon {
+  path {
+    stroke: black;
+    stroke-width: 1px;
+    fill: $black-second;
+  }
 }
 
 .footer__nav {

@@ -49,6 +49,12 @@
   color: #fff;
   border-top: 1px solid $gray-dark;
   border-bottom: 1px solid $gray-dark;
+  transition: color .4s ease-in-out, background-color .4s ease-in-out, border-top .4s ease-in-out, border-bottom .4s ease-in-out;
+
+  &--active {
+    border-top: 1px solid $focus;
+    border-bottom: 1px solid $focus;
+  }
 
   &:focus-visible {
     background-color: $black-second;
@@ -57,20 +63,44 @@
   &:hover {
     color: $focus;
 
-    .accordion__icon {
+    svg {
       stroke: $focus;
     }
   }
 
   &:active {
     color: $focus;
+
+    svg {
+      circle {
+        stroke: $focus;
+        fill: $focus;
+      }
+
+      path {
+        stroke: #fff;
+      }
+    }
   }
 
   .accordion__icon {
     position: absolute;
     top: 20px;
     right: 0;
-    stroke: $gray-dark;
+    stroke: #fff;
+    transform: rotateX(180deg);
+
+    circle {
+      transition: stroke .4s ease-in-out, fill .4s ease-in-out;
+    }
+
+    path {
+      transition: stroke .4s ease-in-out;
+    }
+  }
+
+  .accordion__icon--active {
+    transform: none;
   }
 }
 
@@ -127,8 +157,14 @@
     margin-bottom: 12px;
   }
 
+  &__social-link {
+    width: 24px;
+    height: 24px;
+    @include fill-only-icon
+  }
+
   &__icon {
-    stroke: $gray-dark;
+    fill: $gray-dark;
   }
 
   &__title {
