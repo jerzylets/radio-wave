@@ -24,6 +24,14 @@
   background-color: #fff;
 }
 
+.podcasts__item:nth-child(n + 9) {
+  display: none;
+}
+
+.podcasts__item.is-visible {
+  display: flex;
+}
+
 .podcast__img {
   height: 100%;
 }
