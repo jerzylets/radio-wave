@@ -6,6 +6,6 @@ const choices = new Choices(element, {
   itemSelectText: '',
 })
 
-// const selected = function () {
-//   document.querySelector('choices__item.is-selected').setAttribute('tabindex', '-1');
-// }
+const selected = () => {
+  document.getElementsByClassName('choices__item--choice').style.color = 'red';
+};

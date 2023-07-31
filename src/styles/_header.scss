@@ -63,8 +63,12 @@
   align-items: center;
   gap: 52px;
 
-  .secondary-menu__list {
+  &__list {
     gap: 52px;
+  }
+
+  &__link {
+    cursor: pointer;
   }
 }
 

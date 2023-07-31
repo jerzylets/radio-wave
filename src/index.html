@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" type="text/css" href="../node_modules/dialog-polyfill/dist/dialog-polyfill.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/index.scss">
   <base target="_blank">
 </head>
@@ -599,7 +600,7 @@
           <article class="programs__item flex">
             <picture class="programs__pic">
               <source srcset="img/biblioteque-320.jpg" media="(max-width: 575px)">
-              <img class="programs__image" src="img/biblioteque.jpg" alt="Гравюра библиотеки">
+              <img class="programs__image" src="img/biblioteque.jpg" alt="Гравюра библиотеки" data-target="1">
             </picture>
             <div class="programs__content flex">
               <h3 class="programs__title">
@@ -608,7 +609,7 @@
               <div class="programs__text">
                 Анонсируется отдельно
               </div>
-              <a class="programs__link" href="#">
+              <a class="programs__link" href="#" data-path="1">
                 Подробнее
                 <svg class="programs__icon" width="28" height="12" viewBox="0 0 28 12"
                   xmlns="http://www.w3.org/2000/svg">
@@ -622,7 +623,7 @@
           <article class="programs__item flex">
             <picture class="programs__pic">
               <source srcset="img/graphomaniac-320.jpg" media="(max-width: 575px)">
-              <img class="programs__image" src="img/graphomaniac.jpg" alt="Графоман">
+              <img class="programs__image" src="img/graphomaniac.jpg" alt="Графоман" data-target="2">
             </picture>
             <div class="programs__content flex">
               <h3 class="programs__title">
@@ -631,7 +632,7 @@
               <div class="programs__text">
                 По понедельникам в 10:00
               </div>
-              <a class="programs__link" href="#">
+              <a class="programs__link" href="#" data-path="2">
                 Подробнее
                 <svg class="programs__icon" width="28" height="12" viewBox="0 0 28 12"
                   xmlns="http://www.w3.org/2000/svg">
@@ -645,7 +646,7 @@
           <article class="programs__item flex">
             <picture class="programs__pic">
               <source srcset="img/coliseum-320.jpg" media="(max-width: 575px)">
-              <img class="programs__image" src="img/coliseum.jpg" alt="Колизей">
+              <img class="programs__image" src="img/coliseum.jpg" alt="Колизей" data-target="3">
             </picture>
             <div class="programs__content flex">
               <h3 class="programs__title">
@@ -654,7 +655,7 @@
               <div class="programs__text">
                 По вторникам в 12:00
               </div>
-              <a class="programs__link" href="#">
+              <a class="programs__link" href="#" data-path="3">
                 Подробнее
                 <svg class="programs__icon" width="28" height="12" viewBox="0 0 28 12"
                   xmlns="http://www.w3.org/2000/svg">
@@ -668,7 +669,7 @@
           <article class="programs__item flex">
             <picture class="programs__pic">
               <source srcset="img/gentleman-320.jpg" media="(max-width: 575px)">
-              <img class="programs__image" src="img/gentleman.jpg" alt="Джентельмен">
+              <img class="programs__image" src="img/gentleman.jpg" alt="Джентельмен" data-target="4">
             </picture>
             <div class="programs__content flex">
               <h3 class="programs__title">
@@ -677,7 +678,7 @@
               <div class="programs__text">
                 По пятницам в 17:00
               </div>
-              <a class="programs__link" href="#">
+              <a class="programs__link" href="#" data-path="4">
                 Подробнее
                 <svg class="programs__icon" width="28" height="12" viewBox="0 0 28 12"
                   xmlns="http://www.w3.org/2000/svg">
@@ -691,7 +692,7 @@
           <article class="programs__item flex">
             <picture class="programs__pic">
               <source srcset="img/rabbit-320.jpg" media="(max-width: 575px)">
-              <img class="programs__image" src="img/rabbit.jpg" alt="Средневекой кролик">
+              <img class="programs__image" src="img/rabbit.jpg" alt="Средневекой кролик" data-target="5">
             </picture>
             <div class="programs__content flex">
               <h3 class="programs__title">
@@ -700,7 +701,7 @@
               <div class="programs__text">
                 По субботам в 10:00
               </div>
-              <a class="programs__link" href="#">
+              <a class="programs__link" href="#" data-path="5">
                 Подробнее
                 <svg class="programs__icon" width="28" height="12" viewBox="0 0 28 12"
                   xmlns="http://www.w3.org/2000/svg">
@@ -714,7 +715,7 @@
           <article class="programs__item flex">
             <picture class="programs__pic">
               <source srcset="img/hedgehog-320.jpg" media="(max-width: 575px)">
-              <img class="programs__image" src="img/hedgehog.jpg" alt="Ёж">
+              <img class="programs__image" src="img/hedgehog.jpg" alt="Ёж" data-target="6">
             </picture>
             <div class="programs__content flex">
               <h3 class="programs__title">
@@ -723,7 +724,7 @@
               <div class="programs__text">
                 По воскресеньям в 15:00
               </div>
-              <a class="programs__link" href="#">
+              <a class="programs__link" href="#" data-path="6">
                 Подробнее
                 <svg class="programs__icon" width="28" height="12" viewBox="0 0 28 12"
                   xmlns="http://www.w3.org/2000/svg">
@@ -1615,91 +1616,109 @@
           <div class="about__decor about__decor--1">
           </div>
         </div>
-        <div class="about__people flex">
-          <article class="about__card host flex">
-            <picture class="host__pic">
-              <source srcset="img/gutenberg-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source srcset="img/gutenberg.jpg" media="(min-width: 576px) and (max-width: 767px)">
-              <source srcset="img/gutenberg-320.jpg" media="(max-width: 575px)">
-              <img class="host__image" src="img/gutenberg.jpg" alt="Дмитрий Гутенберг">
-            </picture>
-            <h3 class="host__title">
-              Дмитрий Гутенберг
-            </h3>
-            <p class="host__desc">
-              Эксперт (ну, почти) по всем вопросам (почти)
-            </p>
-          </article>
-          <article class="about__card host flex">
-            <picture class="host__pic">
-              <source srcset="img/vasielieva-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source srcset="img/vasielieva.jpg" media="(min-width: 576px) and (max-width: 767px)">
-              <source srcset="img/vasielieva-320.jpg" media="(max-width: 575px)">
-              <img class="host__image" src="img/vasielieva.jpg" alt="Анна Васильева">
-            </picture>
-            <h3 class="host__title">
-              Анна Васильева
-            </h3>
-            <p class="host__desc">
-              Как я здесь оказалась? А главное — зачем?
-            </p>
-          </article>
-          <article class="about__card host flex">
-            <picture class="host__pic">
-              <source srcset="img/dmitrievsky-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source srcset="img/dmitrievsky.jpg" media="(min-width: 576px) and (max-width: 767px)">
-              <source srcset="img/dmitrievsky-320.jpg" media="(max-width: 575px)">
-              <img class="host__image" src="img/dmitrievsky.jpg" alt="Пётр Дмитриевский">
-            </picture>
-            <h3 class="host__title">
-              Пётр Дмитриевский
-            </h3>
-            <p class="host__desc">
-              Господа! Внимание! Благодарю за внимание!
-            </p>
-          </article>
-          <article class="about__card host flex">
-            <picture class="host__pic">
-              <source srcset="img/fleganova-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source srcset="img/fleganova.jpg" media="(min-width: 576px) and (max-width: 767px)">
-              <source srcset="img/fleganova-320.jpg" media="(max-width: 575px)">
-              <img class="host__image" src="img/fleganova.jpg" alt="Татьяна Флеганова">
-            </picture>
-            <h3 class="host__title">
-              Татьяна Флеганова
-            </h3>
-            <p class="host__desc">
-              Одна я в пальто стою красивая, а вокруг…
-            </p>
-          </article>
-          <article style="display: none;" class="about__card host flex">
-            <picture class="host__pic">
-              <source srcset="img/prokopiev-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source srcset="img/prokopiev.jpg" media="(min-width: 576px) and (max-width: 767px)">
-              <source srcset="img/prokopiev-320.jpg" media="(max-width: 575px)">
-              <img class="host__image" src="img/prokopiev.jpg" alt="Фёдор Прокопьев">
-            </picture>
-            <h3 class="host__title">
-              Фёдор Прокопьев
-            </h3>
-            <p class="host__desc">
-              Привет! Я фотограф, музыкант, ведущий
-            </p>
-          </article>
-          <article style="display: none;" class="about__card host flex">
-            <picture class="host__pic">
-              <source srcset="img/kortneva-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
-              <source srcset="img/kortneva.jpg" media="(min-width: 576px) and (max-width: 767px)">
-              <source srcset="img/kortneva-320.jpg" media="(max-width: 575px)">
-              <img class="host__image" src="img/kortneva.jpg" alt="Светлана Кортнева">
-            </picture>
-            <h3 class="host__title">
-              Светлана Кортнева
-            </h3>
-            <p class="host__desc">
-              Художник-оформитель. Оформляю
-            </p>
-          </article>
+        <div class="about__people">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="about__card host flex">
+                  <picture class="host__pic">
+                    <source srcset="img/gutenberg-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="img/gutenberg.jpg" media="(min-width: 576px) and (max-width: 767px)">
+                    <source srcset="img/gutenberg-320.jpg" media="(max-width: 575px)">
+                    <img class="host__image" src="img/gutenberg.jpg" alt="Дмитрий Гутенберг">
+                  </picture>
+                  <h3 class="host__title">
+                    Дмитрий Гутенберг
+                  </h3>
+                  <p class="host__desc">
+                    Эксперт (ну, почти) по всем вопросам (почти)
+                  </p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="about__card host flex">
+                  <picture class="host__pic">
+                    <source srcset="img/vasielieva-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="img/vasielieva.jpg" media="(min-width: 576px) and (max-width: 767px)">
+                    <source srcset="img/vasielieva-320.jpg" media="(max-width: 575px)">
+                    <img class="host__image" src="img/vasielieva.jpg" alt="Анна Васильева">
+                  </picture>
+                  <h3 class="host__title">
+                    Анна Васильева
+                  </h3>
+                  <p class="host__desc">
+                    Как я здесь оказалась? А главное — зачем?
+                  </p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="about__card host flex">
+                  <picture class="host__pic">
+                    <source srcset="img/dmitrievsky-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="img/dmitrievsky.jpg" media="(min-width: 576px) and (max-width: 767px)">
+                    <source srcset="img/dmitrievsky-320.jpg" media="(max-width: 575px)">
+                    <img class="host__image" src="img/dmitrievsky.jpg" alt="Пётр Дмитриевский">
+                  </picture>
+                  <h3 class="host__title">
+                    Пётр Дмитриевский
+                  </h3>
+                  <p class="host__desc">
+                    Господа! Внимание! Благодарю за внимание!
+                  </p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="about__card host flex">
+                  <picture class="host__pic">
+                    <source srcset="img/fleganova-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="img/fleganova.jpg" media="(min-width: 576px) and (max-width: 767px)">
+                    <source srcset="img/fleganova-320.jpg" media="(max-width: 575px)">
+                    <img class="host__image" src="img/fleganova.jpg" alt="Татьяна Флеганова">
+                  </picture>
+                  <h3 class="host__title">
+                    Татьяна Флеганова
+                  </h3>
+                  <p class="host__desc">
+                    Одна я в пальто стою красивая, а вокруг…
+                  </p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="about__card host flex">
+                  <picture class="host__pic">
+                    <source srcset="img/prokopiev-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="img/prokopiev.jpg" media="(min-width: 576px) and (max-width: 767px)">
+                    <source srcset="img/prokopiev-320.jpg" media="(max-width: 575px)">
+                    <img class="host__image" src="img/prokopiev.jpg" alt="Фёдор Прокопьев">
+                  </picture>
+                  <h3 class="host__title">
+                    Фёдор Прокопьев
+                  </h3>
+                  <p class="host__desc">
+                    Привет! Я фотограф, музыкант, ведущий
+                  </p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="about__card host flex">
+                  <picture class="host__pic">
+                    <source srcset="img/kortneva-1024.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="img/kortneva.jpg" media="(min-width: 576px) and (max-width: 767px)">
+                    <source srcset="img/kortneva-320.jpg" media="(max-width: 575px)">
+                    <img class="host__image" src="img/kortneva.jpg" alt="Светлана Кортнева">
+                  </picture>
+                  <h3 class="host__title">
+                    Светлана Кортнева
+                  </h3>
+                  <p class="host__desc">
+                    Художник-оформитель. Оформляю
+                  </p>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
         <form class="about__form feedback grid" action="https://jsonplaceholder.typicode.com/post" method="post">
           <textarea class="feedback__textarea feedback__input" name="feedback" id="feedback" placeholder="Что скажете?"
@@ -1835,6 +1854,7 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 

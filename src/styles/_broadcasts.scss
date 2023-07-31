@@ -100,7 +100,10 @@
 
 .choices__list--dropdown .choices__item--selectable {
   padding-right: 20px;
-  border-top: 1px solid $gray;
+}
+
+.choices__list--dropdown .choices__item--selectable:not(:last-child) {
+  border-bottom: 1px solid $gray;
 }
 
 .choices__list--single .choices__item--selectable {
@@ -163,6 +166,10 @@
 
 .programs__item {
   font-size: 0;
+}
+
+.programs__image {
+  transition: opacity .4s ease-in-out;
 }
 
 .programs__image--muddy {
