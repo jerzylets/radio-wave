@@ -3,8 +3,16 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 4,
-  spaceBetween: 10,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+  },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
     // если будут добавлены новые слайды, следущую строчку нужно будет переписать
