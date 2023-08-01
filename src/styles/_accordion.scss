@@ -1,0 +1,10 @@
+.accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+  transition-property: display, height, visibility;
+  transition-timing-function: ease;
+}
+
+.accordion__active .accordion__content {
+  visibility: visible;
+}
