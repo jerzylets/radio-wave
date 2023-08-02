@@ -4,3 +4,4 @@ import './_choice';
 import './_blur';
 import './_swiper';
 import './_accordion';
+import './_guests';

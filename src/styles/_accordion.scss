@@ -8,3 +8,11 @@
 .accordion__active .accordion__content {
   visibility: visible;
 }
+
+.accordion__icon {
+  transition: transform .2s ease-in-out;
+}
+
+.accordion__active .accordion__icon {
+  transform: rotateX(0);
+}
