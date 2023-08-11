@@ -1,0 +1,95 @@
+@import "variables";
+@import "mixins";
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.entry-window {
+  position: relative;
+  flex-direction: column;
+  padding: 60px;
+  color: #fff;
+  background-color: $black-main;
+  border: none;
+
+  &__title {
+    margin-bottom: 17px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+  }
+
+  &__text {
+    font-size: $bigfont;
+  }
+
+  &__link {
+    color: $hover;
+    @include hover-link;
+  }
+
+  &__socials {
+    padding-top: 30px;
+  }
+}
+
+.entry-form {
+  flex-direction: column;
+  gap: $offset;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(230, 232, 236, 0.40);
+
+  &__input {
+    @include input;
+  }
+
+  &__input:focus-visible {
+    outline: 1px solid $focus;
+    background-color: $black-second;
+  }
+
+  &__input:hover {
+    outline: 1px solid #fff;
+    background-color: $black-second;
+  }
+
+  &__input:active {
+    outline: 1px solid #fff;
+    background-color: transparent;
+  }
+
+  &__btn {
+    @include blue-button
+  }
+}
+
+.entry-window__link {
+  @include fill-only-icon;
+}
+
+.entry-window__btn-close {
+  @include stroke-only-icon;
+}
+
+.entry-window__socials .entry-window__text {
+  margin-bottom: $offset;
+}
+
+.entry-window__list {
+  gap: $offset;
+}
+
+.entry-window__icon {
+  fill: $gray-dark;
+  transition: fill .4s ease-in-out;
+}
+
+.entry-window__close-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  stroke-width: 3;
+  stroke: $gray-dark;
+  transition: stroke .4s ease-in-out;
+}

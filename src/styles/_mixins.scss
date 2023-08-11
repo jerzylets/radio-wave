@@ -140,3 +140,56 @@
     }
   }
 }
+
+@mixin stroke-only-icon {
+  &:focus-visible {
+    svg {
+      stroke: $focus;
+    }
+  }
+
+  &:hover {
+    svg {
+      stroke: $hover;
+    }
+  }
+
+  &:active {
+    svg {
+      stroke: $active;
+    }
+  }
+}
+
+@mixin path-icon {
+  path {
+    fill: $black-second;
+  }
+}
+
+@mixin hover-link {
+  transition: color .4s ease-in-out;
+
+  &:focus-visible {
+    color: $focus;
+  }
+
+  &:hover {
+    color: $focus;
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
+@mixin input {
+  padding: 25px 32px;
+  background-color: transparent;
+  outline: 1px solid #fff;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 20px;
+  transition: outline .4s ease-in-out, background-color .4s ease-in-out;
+  cursor: pointer;
+}

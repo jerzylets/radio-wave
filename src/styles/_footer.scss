@@ -33,14 +33,11 @@
 
 .footer-socials__icon {
   fill: $gray;
+  transition: fill .4s ease-in-out;
 }
 
-.vk-icon {
-  path {
-    stroke: black;
-    stroke-width: 1px;
-    fill: $black-second;
-  }
+.path-icon {
+  @include path-icon;
 }
 
 .footer__nav {
